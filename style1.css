@@ -1,0 +1,113 @@
+* {
+    font-family :'Gill Sans', 'Gill Sans MT' ;
+}
+h1 {
+    color:#b92b27;
+}
+#login {
+    background-color:white;  /* we use id selector to give property on specific things on web page using #id given in html tag*/
+}
+#signup{
+    background-color:#b92b27;
+}
+.upvote {
+    background-color:green;  /*use class selector with . to give property on specific things on page */
+}
+
+.post a {
+    color:rgb(67, 94, 133);   /* descendant selector use ansestors to give property like in div which has class and using it we have to give color of each paragraph  */
+} 
+/*p a {
+    color:aliceblue ;   /*it work for all paragraph to give color of anchor present in the p , avoid this we can use class to give in paragraph in html code
+}  */
+nav ul li {
+    color:coral;
+}  
+#myid p{
+    color:aquamarine; /* here we did same thing div of paragraph given color*/
+}
+div[id="myid"] p{
+    color:aqua; /* second way of given property in div using id */ 
+}
+/* Adjecent sibling compbinator - when we need to give property by doing combine two or more thing which are at same level like + works as combinator */
+p + h3 {
+   text-decoration: underline; 
+}
+.upvote + button {
+    background-color : blue;
+}
+/* child combinator - use a diect children of an ansestor eg select all button which are direct children of span*/
+div > input {
+    background-color:beige; /*here we cant ignore the intermadiate layer like descendant attribute */
+}
+/*Attribute Selector - select elements based on the presence or value of given attribute */
+input[type="text"] {
+    color:deepskyblue;
+}
+input[type="password"]{
+    color:green;
+}
+input[type] {
+    background-color:lightcyan;
+}
+/* PSeudo class -> Akeyword added to a selector that specifies a special state of the selected elements
+:havor class - to apply something on moving cursive or arrow and change property use like button:hover
+:active class - whenever we click anything ,that is active so here we can use it
+:checked class - used for checkbox ,like color changed after ticking 
+:nth-of-type - help to select nth element 
+ */
+button:hover{
+    background-color:black;
+    color: white;
+}
+h3:hover{
+    text-decoration: none ;
+}
+button:active{
+    background-color: pink;
+}
+p:active{
+    font-weight:bolder;
+    color:green;
+}
+input[type="radio"]:checked + label{
+    color:red;
+    font-weight:bolder;
+}
+.post:nth-of-type(2n){
+    color:blueviolet; /*there are many type of this pseudo class exist you can explore on mdn*/
+}
+/*Pseudo Elements - A keyword added to selector that lets you style a specific part of the selected elements
+::first-letter - chenage first letter of any tags 
+::first-line -   change the whole line ofany tag
+selection- after selected anything in any part  
+there are many exist this kind of element 
+ */
+ h1::first-letter{
+    color:green;
+ }
+p::first-line{
+    color:purple;
+}
+p::selection{
+    background-color:blue;
+}
+/* css : cascading styleSheetd - the css casecade algorithm's jon is to select css declarations in order to determine the correct values for css propertie s
+ name has to same of the tag or element (selector)then cascading propery apply*/
+ h3 {
+    background-color:green;
+ }
+ h3{
+    background-color:aquamarine;
+ }
+ /*selector specificity - specificity is an algorithm that calculates the weight that is applied to a given css declaration
+ it work like  id_class/attribute/pesudo_elemnt id is more importance than class than element 
+ you can check it by move curive on selectors above */
+
+ /*!important - to show the mose specific things in document like*/
+ h1::first-letter {
+      color:darkseagreen m !important;
+ }
+/* Inheritance in css - when property flow from one level to other level ,super level to sub level this is known as inheritance in css 
+child elements always want to inherit property of parent or grand parent , except input and button if we want inherit both then we have to write inherit key in css otherwise in would not inherit by default*/  
+/* not all css property not inherit by default like width,height,border*/

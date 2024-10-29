@@ -1,0 +1,75 @@
+/*
+DISPLAY - It sets whether an element is treated as a block or inline element and the layout used for its children
+
+display : inline
+display : block
+conclusion 
+BLOCK : it always start on a new line , take up as much horizontal space as possible (the full width of the container or browser window if there is no container 
+           will respect width and height css properties , that means here applied the css properties in block case 
+           HOrizontal and vertical margin both work
+INLINE : DO not statrt on a new line , Only use as much horixontal space as required by the content .Do not accept width and height CC Properties 
+        Margin will work horizontally from both side left and right , but not vertically 
+        Padding works on all sides , but the top and bottom may overlap other element.
+
+        exapmle you can seen to write in div or paragraph a span the is inline so here show the inlin conclusion
+*/
+div {
+    height : 200px;
+    width :200px;
+    background-color : green;
+    border: 2px solid black ;
+    margin: 5px;
+   /* display : inline ;  this will be not apply on div because , i am amking inline display of div , browser ignore the all property apply on inline so*/
+    display : inline-block ; /* so for doing this we can make block in inline that means element div style applied like block and it behaive like inline so it works how */
+
+}
+#third{
+    display : none ; /* here we are hiding this 3rd block */
+}
+
+h1 {
+    border: 2px solid black ;
+    width : 40%;
+}
+
+#outer {
+    height: 400px;
+    width: 400px;
+    background-color: pink;
+    margin:20px;
+
+}
+#inner{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    margin-left: 10%;
+}
+#outer1 {
+    height:400px;
+    width:400px;
+    border: 2px solid black;
+    background-color : pink;
+    font-size: 20px ;
+    margin:20px ;
+}
+
+#inner1 {
+    height:100px;
+    width:100px;
+    background-color:cornflowerblue;
+    font-size: 2em;
+    padding: 1em;
+}
+
+button{
+    font-size: 50px;
+    border-radius: 15px;
+    border: 5px solid green;
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+/* Drawback of Em -  snowball effect in nested elements 
+so avoid it new relative unit introdued that is root rem (Rem)
+set the font sizeof root element*/

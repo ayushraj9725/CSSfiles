@@ -1,0 +1,65 @@
+/* here we design and use box margin property in css and use it on web page we learn and apply like - Height,width,Border,Padding,Margin
+key point  - box contain border which is tha outer part of box
+             we add content into box , so what are the size of box in term of Height and Width 
+             padding - it define the space occupy between or around content size and border (save space in individual box)
+             margin is define as how we fix it on page this way of fixing what property use that is called margin */
+
+/*Heigth - By default ,it sets the content area/height ofthe element 
+  Width - By default , it sets the content area width of the element  */
+
+/* Border  - used to set element's border 
+   border-width -> to set the width of box border in px cm in etc
+   border-style -> to set the style of box border like solid dashed
+   border-color -> to set the color of the box border
+   we can use to achive them in single line using Border shorthand 
+   width | style | color
+
+   Border sides -  to control an individuals side of the box 
+   border-left ,border-right ,border-top ,border-bottom 
+   */
+   /* border radius -> used to give  round the corners of an element's outer border edge 
+    use the dimentions in px, % ,cm etc*/
+     
+   /*Padding - padding-left,padding-right,padding-top,padding-bottom */
+    div {
+       height: 200px;
+       width: 500px;  
+       background-color:pink;
+      /* border-width:5px;
+       border-style:solid;
+       border-color: green; */
+       border: 5px solid blue; 
+
+       border-left-color:skyblue;
+       border-left-style:solid;
+       border-bottom-style:dashed;
+       border-bottom-color:aqua;
+       
+       border-radius:15px;
+       border-top-right-radius:5%;
+       
+       padding-left:20px;
+       padding-top:30px;
+       padding-right:20px;
+       padding-bottom:30px; 
+
+      /* margin-left:25px;
+       margin-bottom:30px; */
+
+       margin: 10px 20px 30px; /* margin shorthand */
+   }   
+   button{
+    border:2px solid green;
+    background-color:blue;
+    border-radius:10px;
+    padding-left: 25px;
+    padding-right: 25px;    /* we can make padding shorthand 1. for all 4 side like padding:px;
+                            2. top & bottom | left & right - 1px 2px (left right) 
+                            3. top|left & right | bottom - 1px , 2px ,3px   (move like clock wise from top to clock )
+                            4. top | right | botton | left - padding:1px 2px 3px 4px (for top right bottom left*/
+
+   }
+   /*
+   Margin - To set spacing on the outside of border 
+   margin-left , margin-right ,margin-top,margin-bottom 
+   */
