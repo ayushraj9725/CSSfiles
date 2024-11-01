@@ -1,0 +1,75 @@
+/* flexbox -> flexible box layout 
+it is one dimensional layout method for arranging in form of rows and columns 
+it helpstomake website responsive so that accordingly web can fix itself to show contain on any type of screen
+to apply this we should learnabout the flex model - this is based on direction that is type one is main and other is cross direction 
+here in page rows is main direction(X axis) and columns is crossing direction(Y axis) .
+
+flexBox how apply and use - it is simple to use just like make display : flex of particular container where some contains laying 
+below the some of example coded (it's direction show in row and ,it restrictthe overflow the things from the container
+
+flexbox-direction -> it shows how items are placed in the specific flex container , along with axis or direction 
+flex-derection : row -> it show effect main axis from left to right
+flex-direction : row-reverse -> it shows effect main axis from right to left 
+flex-derection : column -> main axis , top to bottom ;
+flex-direction : column-reverse -> main axis , bottom to top ;
+
+: justify-content : flex-start (point the space time of adjusting from start ) flex-end ( from last ) and flex-center (it set the flex body to center)
+it tells to the browseer "How the space distributed " among the items along the main-axis 
+
+there are also there type to tell that : space-between (shows the extra space alogn the main exis that distribute among the box), space-around(), and space-evenly(also distribute extra space evenly between the boxes) .
+if the space not having along the main axis then it will not work 
+
+flex wrap : IT will decide the , set whether flex items are forced onto one line or can wrap onto multiple line
+flex-wrap : nowrap (if any item not able to fit then it will help to skeez the item width to fix them so use nowrap )
+flex-wrap : wrap (only fix till the line width and set and again nextline  )
+flex-wrap : wrap-reverse (bottom to top wrap the items and fix )
+
+align-items : flex-start(distribute the space along the cross axis from start) , flex-end (distribute the space along the cross axis from end) ,and flex-center (distribute the space along the cross axis in center)
+one more that is -> align-items : baseline (fix along the same line (along the cross line))
+
+align-content : (it sets the the distribution of space between and around content items along a flexbox 's cross line)
+ align-content : flex-start / flex-end / flex-center 
+ align-content : space-between /space-around / space-evenly 
+ align-center : baseline 
+
+ align-self : (align an item along the cross exis )
+ align-self : flex-start / end / center / baseline 
+
+flexsizing : flex-basis 100px -> it sets the initial main size of a flex item .(manually we can manipulate the size using shrink or amrash)
+             flex-grow -> size we can increase 
+             flex-shrink -> size we can decrease manually 
+
+             shorthand -> flex-grow , flex-shrink , flex-basis(2 2 10px) if flex-grow , flex-basis (2 10px) if unit less it would grow or shrink
+             
+ 
+
+*/
+.container{
+    height : 200px;
+    width : 800px;
+    background-color: pink;
+    margin : 20px auto ;
+    border: 2px solid rebeccapurple;
+    box-shadow: 2px 2px 8px brown;
+    display : flex ;
+    flex-direction: column;
+     /* it is fixing the containing things like div boxes in row to decreasing the dimension while restricting the overflow and do adjustment  
+     but here it is overflowing so */ 
+    /* justify-content: space-between; it is not working   */
+    overflow: auto;  /*It is given trainsition and set the things */
+    justify-content: s;
+}
+.container #box {
+    height : 50px;
+    width : 200px;
+    background-color: rgb(241, 241, 244);
+    display : inline-block ;
+    margin : 10px ;
+
+}
+h4{
+    text-align: center;
+    position : relative ;
+    bottom : 0.3em ;
+    color: blue;
+}
